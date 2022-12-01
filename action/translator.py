@@ -131,5 +131,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    main(authentication_key=args.authentication_key, encoding=args.encoding):
-
+    main(authentication_key=args.authentication_key, encoding=args.encoding)
