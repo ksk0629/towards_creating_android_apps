@@ -23,6 +23,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r ./action/requirements.txt
       - name: Check
-        run: echo env.AUTHENTICATION_KEY_DEEPL
+        run: echo $AUTHENTICATION_KEY_DEEPL
       - name: Run Python
-        run: python ./action/translator.py env.AUTHENTICATION_KEY_DEEPL
+        run: python ./action/translator.py $AUTHENTICATION_KEY_DEEPL
