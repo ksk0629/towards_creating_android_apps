@@ -23,4 +23,4 @@ jobs:
       - name: Install dependencies
         run: pip install -r ./action/requirements.txt
       - name: Run Python
-        run: python ./action/translator.py $AUTHENTICATION_KEY_DEEPL
+        run: python ./action/translator.py authentication_key $AUTHENTICATION_KEY_DEEPL
