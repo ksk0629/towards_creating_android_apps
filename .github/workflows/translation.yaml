@@ -22,7 +22,12 @@ jobs:
         run: python -V
       - name: Install dependencies
         run: pip install -r ./action/requirements.txt
-      - name: Check
-        run: echo $AUTHENTICATION_KEY_DEEPL
       - name: Run Python
         run: python ./action/translator.py $AUTHENTICATION_KEY_DEEPL
+      - name: Git push
+        run:
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add ./document/*
+          git commit -m "Generated automatically by git-actions"
+          git push
