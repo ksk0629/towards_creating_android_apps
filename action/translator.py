@@ -131,5 +131,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if not main(authentication_key=args.authentication_key, encoding=args.encoding):
-        print("Something went wrong.")
+    main(authentication_key=args.authentication_key, encoding=args.encoding):
+
