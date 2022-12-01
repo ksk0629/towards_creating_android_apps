@@ -1,0 +1,26 @@
+name: document translation
+
+on:
+  push:
+    branches: 
+      - develop
+  workflow_dispatch:
+
+jobs:
+  numpy-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+        env:
+          AUTHENTICATION_KEY_DEEPL: ${{ secrets.AUTHENTICATION_KEY_DEEPL }}
+      - name: Get Python version
+        run: python -V
+      - name: Install dependencies
+        run: pip install -r ./action/requirements.txt
+      - name: Run Python
+        run: python ./action/translator.py $AUTHENTICATION_KEY_DEEPL
