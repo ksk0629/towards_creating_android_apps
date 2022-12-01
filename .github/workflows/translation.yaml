@@ -5,6 +5,8 @@ on:
     branches: 
       - develop
   workflow_dispatch:
+env:
+  AUTHENTICATION_KEY_DEEPL: ${{ secrets.AUTHENTICATION_KEY_DEEPL }}
 
 jobs:
   translation:
@@ -16,11 +18,11 @@ jobs:
         with:
           python-version: '3.8'
           architecture: 'x64'
-        env:
-          AUTHENTICATION_KEY_DEEPL: ${{ secrets.AUTHENTICATION_KEY_DEEPL }}
       - name: Get Python version
         run: python -V
       - name: Install dependencies
         run: pip install -r ./action/requirements.txt
+      - name: Check
+        run: echo ${AUTHENTICATION_KEY_DEEPL}
       - name: Run Python
         run: python ./action/translator.py authentication_key ${AUTHENTICATION_KEY_DEEPL}
