@@ -1,34 +1,28 @@
 # INTRODUCTION
-This document is for how to create android apps. The readers would be quite beginners to developing them. At least I am, actually. That is why this document should be written easy to understand and I will write this like that.
+This document is about how to create android apps on Windows. The readers would be quite beginners to developing them. At least I am, actually. That is why this document should be written easy to understand and I will write this like that.
 
-# ON PROGRAMMING LANGUAGES
-There are some options to develop android apps. One of them is a programming language. I write down some languages to be used to create android apps.
+# ON INTEGRATED DEVELOPMENT ENVIRONMENT
+I feel React Native, progressive web apps or Android Studio is better than Visual Studio (and Xamarin). The reason is just Visual Studio has restrictions. React Native or progressive web apps is better if readers are familiar with web development and the app is not really complex. Otherwise, Android Studio is better.
 
-## Java
-- Advantages:
-    - Official android app programming language, which there is only two official languages
-    - Stable, secure and portable
-    - Multi-threading support
-- Disadvantages
-    - A bit difficult to learn
-    - Some performance drwabacks
+- Reference: [[Overview of Android development on Windows](https://learn.microsoft.com/ja-jp/windows/android/overview)]
 
-## Kotlin
-- Advantages
-    - Official android app programming language, which there is only two official languages
-    - Simple, which means easy to learn
-    - High performance (speed, accuracy, flexibility, security and stability)
+## NATIVE ANDROID
+Native android development means that an app is targeting only Android not iOS. There are the two following IDEs.
 
-## C/C++
-- Advantages
-    - Faster
-    - cross-platform
+- Android Studio
+    - code: Java / Kotlin
+- Visual Studio (VS)
 
-## C#
-- Advantages
-    - 
+VS has some restrictions for commercial use so Android Studio would be better.
 
+## Cross-platform
+Cross-platform development means that an app would work on both Android and iOS. The whole codes might not be the exact same, but mostly they are.
 
-# References
-- [[Build your first android app](https://developer.android.com/training/basics/firstapp)]: Looks like tutorial.
-- [[The 7 Best Programming Languages to Write & Develop Native Android Apps](https://www.netsolutions.com/insights/best-programming-languages-to-write-develop-android-apps/#:~:text=The%20majority%20of%20Android%20apps,and%20Basic%20are%20also%20used.)]: On programing languages.
+- Xamarin, which is one of the tools of VS
+    - C#
+- React Native
+    - UI code: JavaScript
+    - logic code: JavaScript
+- Progressive web apps (PWA)
+    - UI code: HTML, CSS and JavaScript
+    - logic code: JavaScript
