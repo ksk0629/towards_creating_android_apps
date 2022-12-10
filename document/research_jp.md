@@ -1,34 +1,32 @@
-# はじめに
-このドキュメントは、アンドロイドアプリの作成方法について書かれたものです。読者はアプリ開発のまったくの初心者のはずです。少なくとも私はそうです。そのため、このドキュメントはわかりやすく書くべきであり、そのように書いていきたいと思います。
+本稿は'./document/research_en.md'をDEEPLで訳した資料である
 
-# プログラミング言語について
-アンドロイドのアプリを開発するには、いくつかの選択肢があります。そのひとつがプログラミング言語です。ここでは、アンドロイドアプリを作るために使われる言語をいくつか書いておきます。
+これは、アンドロイドのアプリを開発するための走り書きメモに過ぎません。
 
-## Java
-- メリット
-    - 2つしかないandroidアプリの公式プログラミング言語
-    - 安定性、安全性、移植性が高い
-    - マルチスレッド対応
-- デメリット
-    - 習得がやや困難
-    - パフォーマンス低下
+# 統合開発環境について
+Visual Studio（とXamarin）よりもReact NativeやProgressive Web Apps、Android Studioの方が良いと感じています。理由は、Visual Studioには制約があるからです。React NativeやプログレッシブWebアプリは、読者がWeb開発に慣れていて、アプリがそれほど複雑でない場合に適している。そうでなければ、Android Studioの方が良い。
 
-## Kotlin
-- メリット
-    - 2つしかないandroidアプリの公式プログラミング言語
-    - シンプル、つまり習得しやすい
-    - 高いパフォーマンス（スピード、正確さ、柔軟性、セキュリティ、安定性）
+- 参考までに[WindowsでのAndroid開発の概要](https://learn.microsoft.com/ja-jp/windows/android/overview)]
 
-## C/C++
-- メリット
-    - より速い
-    - クロスプラットフォーム
+## ネイティブアンドロイド
+ネイティブアンドロイド開発とは、iOSではなくAndroidのみをターゲットにしたアプリのことです。IDEは以下の2つがあります。
 
-## C#
-- メリット
-    -
+- アンドロイドスタジオ
+    - コードJava / Kotlin
+- ビジュアルスタジオ（VS）
 
+VSは商用利用には制限があるため、Android Studioの方がよいでしょう。
 
-# 参考文献
-- [[Build your first android app](https://developer.android.com/training/basics/firstapp)]:チュートリアルのようです。
-- [[The 7 Best Programming Languages to Write & Develop Native Android Apps](https://www.netsolutions.com/insights/best-programming-languages-to-write-develop-android-apps/#:~:text=The%20majority%20of%20Android%20apps,and%20Basic%20are%20also%20used.)]:プログラミング言語について。
+## クロスプラットフォーム
+クロスプラットフォーム開発とは、AndroidとiOSの両方でアプリが動作することを意味します。コード全体は全く同じではないかもしれませんが、ほとんどは同じです。
+
+- Xamarinは、VSのツールの1つです。
+    - C#
+- React Native
+    - UIコードJavaScript
+    - ロジックコードJavaScript
+- プログレッシブWebアプリ(PWA)
+    - UIコードHTML、CSS、JavaScript
+    - ロジックコードJavaScript
+
+# その他
+その他、ゲーム開発用のC/C++やPythonなど、アンドロイドアプリを開発するためのオプションがあります。でも、Android Studioで十分な気がするので、特に調べていません。
