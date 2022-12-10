@@ -69,10 +69,10 @@ def create_japanese_doc(
 ) -> bool:
     """Translate a text into Japanese and write it to a file.
 
-    :param str authentication_key: _description_
-    :param str input_path: _description_
-    :param str output_path: _description_
-    :param str encoding: _description_, defaults to "utf-8"
+    :param str authentication_key: authentication key
+    :param str input_path: path to input file
+    :param str output_path: path to output file
+    :param str encoding: encoding method, defaluts to utf-8
     :return bool: whether this function works well or not
     """
     try:
@@ -94,8 +94,8 @@ def create_japanese_doc(
 def main(authentication_key: str, encoding: str = "utf-8") -> None:
     """Create Japanese documents corresponding to all Engilish documents in the document directory.
 
-    :param str authentication_key: _description_
-    :param str encoding: _description_, defaults to "utf-8"
+    :param str authentication_key: authentication key
+    :param str encoding: encoding method, defaluts to utf-8
     """
     # Get all document names in the document directory.
     all_document_names = glob.glob("./document/*")
