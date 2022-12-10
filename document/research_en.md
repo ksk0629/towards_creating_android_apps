@@ -1,5 +1,5 @@
 # INTRODUCTION
-This document is about how to create android apps on Windows. The readers would be quite beginners to developing them. At least I am, actually. That is why this document should be written easy to understand and I will write this like that.
+This is just a scribbled note in order to develop android apps.
 
 # ON INTEGRATED DEVELOPMENT ENVIRONMENT
 I feel React Native, progressive web apps or Android Studio is better than Visual Studio (and Xamarin). The reason is just Visual Studio has restrictions. React Native or progressive web apps is better if readers are familiar with web development and the app is not really complex. Otherwise, Android Studio is better.
