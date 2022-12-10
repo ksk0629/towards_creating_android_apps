@@ -25,3 +25,6 @@ Cross-platform development means that an app would work on both Android and iOS.
 - Progressive web apps (PWA)
     - UI code: HTML, CSS and JavaScript
     - logic code: JavaScript
+
+# Others
+There is another options to develop android app like C/C++ for developing games, Python and so on. But I did not look into them because Android Studio feels like enough.
