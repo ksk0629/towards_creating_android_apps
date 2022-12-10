@@ -80,6 +80,7 @@ def create_japanese_doc(
         translated_text = translate_by_deepl_into_japanese(
             authentication_key=authentication_key, text=input_text
         )
+        translated_text = f"本稿は'{input_path}'をDEEPLで訳した資料である\n\n" + translated_text
         ret = write_text_to_file(
             text=translated_text, output_path=output_path, encoding=encoding
         )
