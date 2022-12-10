@@ -1,4 +1,3 @@
-# INTRODUCTION
 This is just a scribbled note in order to develop android apps.
 
 # ON INTEGRATED DEVELOPMENT ENVIRONMENT
