@@ -1,6 +1,12 @@
 # Introduction
 This document is for learning React Native and the reference will probably be [the official website](https://reactnative.dev/). So I will omit showing the reference if contents, which also contain images, are refferred from the official website.
 
+# What is React Native?
+React Native is an open source framework for building Android and iOS applications using React, which is a JavaScript liobrary for building user interfaces [[React](https://reactjs.org/)], and the app platform's native capabilities. React Native uses the same API structure as React components, that is, understanding React connects to understanding React Native.
+
+# Development Environment
+There are two ways to develop apps using React Native, either using EXPO or, using XCode or Android Studio. The former one needs just only Node.js and a phone or an emulator but apps are not written in the native languages, which are Java or Kotlin, or Swift or Objective-C. That means it will not probably be really elegant. The latter one has like an opposite feature: apps are written in the native languages. But the IDE has to be installed and that is a tricky part, especially XCode since XCode runs on only Mac.
+
 # Basic knowledge
 ## Android and iOS development
 - View: basic building block of UI, which is a small rectangular element on the screen
@@ -28,6 +34,105 @@ This document is for learning React Native and the reference will probably be [t
 
 ![component relation](https://reactnative.dev/docs/assets/diagram_react-native-components.svg)
 
+## Piece of technologies
+### JSX
+JSX is a syntax that lets you write elements inside JavaScript like so: `<Text>Hello, I am your cat!</Text>`. The official React website has a document about JSX [[JSX In Depth]https://reactjs.org/docs/jsx-in-depth.html]. Any JavaScript expression can be used in JSX, for example, `<Text>Hello, I am your {cat_name}!<\TexT>` where `cat_name` is a variable. Note that, JSX is included in React library.
 
-# What is React Native?
-React Native is an open source framework for building Android and iOS applications using React, which is a JavaScript liobrary for building user interfaces [[React](https://reactjs.org/)], and the app platform's native capabilities. React Native uses the same API structure as React components.
+### Custom components
+Components are nestable and reusable. For example, `<Text>` and `<TextInput>` can be nested in `<View>`.
+
+```javascript
+import React from 'react';
+import { Text, TextInput, View } from 'react-native';
+
+const Cat = () => {
+  return (
+    <View>
+      <Text>Hello, I am...</Text>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1
+        }}
+        defaultValue="Name me!"
+      />
+    </View>
+  );
+}
+
+export default Cat;
+```
+
+### Props
+Props, which is short for properties, is like arguments. Most of React Native's Core Components can be customised with props.
+
+```javascript
+import React from 'react';
+import { Text, View } from 'react-native';
+
+const Cat = (props) => {
+  return (
+    <View>
+      <Text>Hello, I am {props.name}!</Text>
+    </View>
+  );
+}
+
+const Cafe = () => {
+  return (
+    <View>
+      <Cat name="Maru" />
+      <Cat name="Jellylorum" />
+      <Cat name="Spot" />
+    </View>
+  );
+}
+
+export default Cafe;
+```
+
+### State
+State is like a components's data storage. I am not quite sure but stored values might not keep on storing after an app re-start [[Reactのstateはどこに保存されるか？](https://teratail.com/questions/343195)].
+
+```javascript
+import React, { Component } from "react";
+import { Button, Text, View } from "react-native";
+
+class Cat extends Component {
+  state = { isHungry: true };
+
+  render() {
+    return (
+      <View>
+        <Text>
+          I am {this.props.name}, and I am
+          {this.state.isHungry ? " hungry" : " full"}!
+        </Text>
+        <Button
+          onPress={() => {
+            this.setState({ isHungry: false });
+          }}
+          disabled={!this.state.isHungry}
+          title={
+            this.state.isHungry ? "Pour me some milk, please!" : "Thank you!"
+          }
+        />
+      </View>
+    );
+  }
+}
+
+class Cafe extends Component {
+  render() {
+    return (
+      <>
+        <Cat name="Munkustrap" />
+        <Cat name="Spot" />
+      </>
+    );
+  }
+}
+
+export default Cafe;
+```
