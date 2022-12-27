@@ -16,9 +16,11 @@ Expo CLI, whcih is short for command line interface, is needed for serving proje
 
 # Cheatsheet
 - create project: `yarn create expo-app [project name]`
+    - After creating a new project, you should go into the created directory.
 - prepare TypeScript
     - install them: `npm install typescript @types/react @types/react-native @types/react-test-renderer @types/jest`
-    - create configuration file: `tsc --init`
+    - create configuration file: `touch tsconfig.json`
+    - Change js into tsc: `mv App.js App.tsx`
 - start an app: `yarn start`
 
 # Reference
