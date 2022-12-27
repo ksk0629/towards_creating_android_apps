@@ -38,10 +38,12 @@ We will see the following three directories right after creating the project in 
 - `res`: For storing all the resources
     - `drawable`: For storing all the app's images
     - `layout`: For storing the UI layout files
+        - xml files that are stored in the directory can be changed by GUI.
     - `menu`: For stroing xml files describing any menus
     - `mipmap`: For storing launcher icons
     - `navigation`: For storing the navigation graph, which tells Android Studio how to navigate between different parts of the app
     - `values`: For storing resouces, such as strings and coloursm, used in the app
+        - The stored strings are used in lauout and maybe in others.
 
 There might exist a `jave (generated)` directory too.
 
