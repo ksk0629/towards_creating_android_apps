@@ -8,7 +8,9 @@ export default class App extends React.Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>My Expo + TypeScript App!</Text>
+        <View style={styles.title_view}>
+          <Text style={styles.title_text}>Cats or Dogs?</Text>
+        </View>
         <Hello name="Expo" enthusiasmLevel={10} />
       </View>
     );
@@ -19,7 +21,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    marginTop: 80,
     alignItems: "center",
-    justifyContent: "center",
+  },
+  title_view: {
+    alignItems: "flex-start",
+  },
+  title_text: {
+    fontSize: 30,
   },
 });
