@@ -3,4 +3,24 @@ Expo allows us develop Android and iOS apps without Android Studio and XCode, wh
 
 Expo CLI, whcih is short for command line interface, is needed for serving projects. Also expo go is needed for calling the app from your physical device.
 
-Reference: https://docs.expo.dev/get-started/installation/
+# Tools
+- On machine
+    - Node.js LTS release - Only Node.js LTS releases (even-numbered)
+    - Git
+    - Watchman (for macOS or Linux users)
+    - Yarn
+    - VS Code Editor
+        - VS Code Expo Extension
+- On device
+    - Expo go
+
+# Cheatsheet
+- create project: `yarn create expo-app [project name]`
+- prepare TypeScript
+    - install them: `npm install typescript @types/react @types/react-native @types/react-test-renderer @types/jest`
+    - create configuration file: `tsc --init`
+- start an app: `yarn start`
+
+# Reference
+- https://docs.expo.dev/get-started/installation/
+- https://www.bacancytechnology.com/blog/react-native-app-with-typescript
