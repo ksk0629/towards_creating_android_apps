@@ -12,12 +12,11 @@ This document is for learning React Native and the reference will probably be [t
 ![all about views](https://reactnative.dev/docs/assets/diagram_ios-android-views.svg)
 
 ## React
-- Components (Either both of them provide a view.)
+- Components (Both of them provide a view.)
     - Function components
     - Class components, which is only components could have state
 
 ## React Native
-- 
 - Native components: corresponding Android and iOS views
     - Are created by React Native at runtime.
 - Core Components: a set of essential, ready-to-use Native Components
