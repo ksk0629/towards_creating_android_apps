@@ -4,7 +4,7 @@
 本ドキュメントはReact Nativeを学習するためのもので、リファレンスはおそらく[公式サイト](https://reactnative.dev/)になります。そのため、画像を含むコンテンツが公式サイトから参照される場合は、リファレンスの表示を省略します。
 
 # React Nativeとは？
-React Nativeは、ユーザーインターフェースを構築するためのJavaScriptライブラリであるReact[[React](https://reactjs.org/)]と、アプリプラットフォームのネイティブ機能を使って、AndroidやiOSアプリケーションを構築するためのオープンソースフレームワークです。React Nativeは、Reactコンポーネントと同じAPI構造を採用しており、つまり、Reactを理解することは、React Nativeを理解することに繋がります。
+React Nativeは、ユーザーインターフェースを構築するためのJavaScriptライブラリであるReact[[React](https://reactjs.org/)]と、アプリプラットフォームのネイティブ機能を使って、AndroidやiOSアプリを構築するためのオープンソースフレームワークである。React Nativeは、Reactコンポーネントと同じAPI構造を採用しており、つまり、Reactを理解することは、React Nativeを理解することに繋がります。
 
 # 開発環境
 React Nativeを使ったアプリの開発には、EXPOを使う方法と、XCodeやAndroid Studioを使う方法の2つがあります。前者は、Node.jsとスマホやエミュレータがあればできますが、ネイティブ言語であるJavaやKotlin、SwiftやObjective-Cでアプリが書かれるわけではありません。つまり、あまりエレガントなものにはならないでしょう。後者は、逆に、アプリがネイティブ言語で書かれている、という特徴があります。しかし、IDEをインストールする必要があり、特にXCodeはMacでしか動かないので、そこが厄介なところです。その点は注意してください。React Nativeは、ネイティブ言語を使ってコードを書くことができますが、Appleの製品が全く必要ないわけではありません。アプリをWindows上でiPhoneだけで開発することもできるようです[[Windows機でiOSアプリの開発から実機インストールまで行ってみる【ReactNative】～環境構築編～](https://qiita.com/BanaoLihua/items/33f05d368f9bbd0bb741)].
