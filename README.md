@@ -1,6 +1,13 @@
 # TOWARDS CREATING ANDROID APPS
 This repository is for creating android apps.
 
+# EXAMPLES
+
+| directory name | language (framework) |
+| --- | --- | --- |
+| AwesomeProject | React Native with Expo |
+| FirstExampleInKotlin | Kotlin with Android Studio |
+
 # REFERENCES
 These references might be useful and I will possibly look into them later.
 
