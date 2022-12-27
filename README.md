@@ -4,7 +4,7 @@ This repository is for creating android apps.
 # EXAMPLES
 
 | directory name | language (framework) |
-| --- | --- | --- |
+| --- | --- |
 | AwesomeProject | React Native with Expo |
 | FirstExampleInKotlin | Kotlin with Android Studio |
 
