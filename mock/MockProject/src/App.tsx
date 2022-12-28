@@ -4,9 +4,11 @@ import { AppRegistry } from "react-native";
 
 import Home from "./screens/Home";
 
-type Props = {};
+interface Props {}
 
-export default class App extends React.Component<Props> {
+interface State {}
+
+export default class App extends React.Component<Props, State> {
   render() {
     return <Home />;
   }
