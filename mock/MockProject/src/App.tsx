@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, AppRegistry } from "react-native";
-import Hello from "./Hello";
+import Hello from "./components/Hello";
 import { expo } from "./../app.json";
 
 type Props = {};
