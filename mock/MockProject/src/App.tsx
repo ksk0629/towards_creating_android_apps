@@ -1,6 +1,6 @@
-import React from "react";
-import { expo } from "./../app.json";
 import { AppRegistry } from "react-native";
+import { expo } from "./../app.json";
+import React from "react";
 
 import Home from "./screens/Home";
 
