@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Button, Text, View } from "react-native";
-import { RadioButton } from "react-native-paper";
 
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -39,8 +38,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    // marginTop: 80,
-    // marginBottom: 50,
     justifyContent: "center",
   },
   question_text_view: {
@@ -52,7 +49,6 @@ const styles = StyleSheet.create({
     color: "green",
   },
   button_view: {
-    // flex: 1,
     flexDirection: "row",
     justifyContent: "space-evenly",
     marginBottom: 300,

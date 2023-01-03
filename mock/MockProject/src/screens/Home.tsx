@@ -30,8 +30,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    // marginTop: 80,
-    // marginBottom: 50,
     justifyContent: "center",
   },
   home_text_view: {
