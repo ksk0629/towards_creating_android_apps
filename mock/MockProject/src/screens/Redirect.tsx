@@ -1,4 +1,5 @@
-import React from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import { useNavigation, useRoute, RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -7,6 +8,25 @@ import { RootStackParamList } from "../RootStackParams";
 type redirectScreenProp = StackNavigationProp<RootStackParamList, "Redirect">;
 
 function RedirectScreen() {
+  console.log("START RedirectScreen.");
+
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    (async () => {
+      const count = await AsyncStorage.getItem("count"); // 保存されたcount（文字列）の取得
+
+      setCount(Number(count || 0) + 1); // Numberにキャストしてインクリメント
+    })();
+  }, []);
+
+  useEffect(() => {
+    if (count) {
+      AsyncStorage.setItem("count", String(count)); // Stringにキャストして保存
+    }
+  }, [count]);
+
+  console.log(`count is ${count}.`);
+
   const navigation = useNavigation<redirectScreenProp>();
   const route = useRoute<RouteProp<RootStackParamList, "Redirect">>();
   const reason = route.params.reason;

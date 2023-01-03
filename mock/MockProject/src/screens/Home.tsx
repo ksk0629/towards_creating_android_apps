@@ -1,4 +1,5 @@
-import React from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, Button, Text, View, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -7,6 +8,17 @@ import { RootStackParamList } from "../RootStackParams";
 type homeScreenProp = StackNavigationProp<RootStackParamList, "Home">;
 
 function HomeScreen() {
+  console.log("START HomeScreen.");
+
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    (async () => {
+      const count = await AsyncStorage.getItem("count"); // 保存されたcount（文字列）の取得
+
+      setCount(Number(count || 0)); // Numberにキャスト
+    })();
+  }, []);
+
   const navigation = useNavigation<homeScreenProp>();
   return (
     <SafeAreaView style={styles.container}>
@@ -18,6 +30,12 @@ function HomeScreen() {
           title="let's get started!"
           color="green"
           onPress={() => navigation.navigate("Question")}
+        />
+        <Text />
+        <Button
+          title="clear data"
+          color="green"
+          onPress={() => AsyncStorage.clear()}
         />
       </View>
     </SafeAreaView>
@@ -41,6 +59,10 @@ const styles = StyleSheet.create({
     color: "green",
   },
   home_button_view: {
+    flex: 1,
+    marginHorizontal: 50,
+  },
+  clear_button_view: {
     flex: 1,
     marginHorizontal: 50,
   },

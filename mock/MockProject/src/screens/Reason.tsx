@@ -19,6 +19,8 @@ const ReasonInput = (props, maxLength) => {
 };
 
 function ReasonScreen() {
+  console.log("START ReasonScreen.");
+
   const navigation = useNavigation<reasonScreenProp>();
   const route = useRoute<RouteProp<RootStackParamList, "Reason">>();
   const preferedAnimal = route.params.preferredAnimal;
