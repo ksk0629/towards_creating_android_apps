@@ -67,7 +67,7 @@ const Cat = () => {
 ```
 
 ### プロップス
-Propsはpropertiesの略で、引数のようなものです。React NativeのCore Componentsのほとんどは、propsを使ってカスタマイズすることができます。
+Propsとはpropertiesの略で、引数のようなものです。React NativeのCore Componentsのほとんどは、propsを使ってカスタマイズすることができます。
 
 ``javascript
 import React from 'react';

@@ -13,6 +13,8 @@ import RedirectScreen from "./screens/Redirect";
 const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
+  console.log("START App.");
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
