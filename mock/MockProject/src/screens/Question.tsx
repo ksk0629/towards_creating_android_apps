@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Button, Text, View } from "react-native";
+import { StyleSheet, Button, Text, Image, View } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -17,16 +17,28 @@ function QuestionScreen() {
         </Text>
       </View>
       <View style={styles.button_view}>
-        <Button
-          title="CATS"
-          color="green"
-          onPress={() => navigation.navigate("Home")}
-        />
-        <Button
-          title="DOGS"
-          color="green"
-          onPress={() => navigation.navigate("Home")}
-        />
+        <View>
+          <Button
+            title="CATS"
+            color="green"
+            onPress={() => navigation.navigate("Home")}
+          />
+          <Image
+            style={styles.image}
+            source={require("./../../assets/animal_cat_front.png")}
+          />
+        </View>
+        <View>
+          <Button
+            title="DOGS"
+            color="green"
+            onPress={() => navigation.navigate("Home")}
+          />
+          <Image
+            style={styles.image}
+            source={require("./../../assets/animal_dog_front.png")}
+          />
+        </View>
       </View>
     </View>
   );
@@ -51,6 +63,11 @@ const styles = StyleSheet.create({
   button_view: {
     flexDirection: "row",
     justifyContent: "space-evenly",
-    marginBottom: 300,
+    marginBottom: 100,
+  },
+  image: {
+    width: 120,
+    height: 240,
+    resizeMode: "stretch",
   },
 });
