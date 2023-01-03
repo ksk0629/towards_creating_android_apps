@@ -8,6 +8,8 @@ This repository is for creating android apps.
 | -------------------- | -------------------------- |
 | AwesomeProject       | React Native with Expo     |
 | FirstExampleInKotlin | Kotlin with Android Studio |
+| FirstNavigation      | React Native with Expo using useNavigation (stuck) |
+| LinkNavigation       | React Native with Expo using useNavigation (link) |
 
 # REFERENCES
 
