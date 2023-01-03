@@ -7,6 +7,7 @@ import { RootStackParamList } from "./RootStackParams";
 
 import HomeScreen from "./screens/Home";
 import QuestionScreen from "./screens/Question";
+import ReasonScreen from "./screens/Reason";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -16,6 +17,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Question" component={QuestionScreen} />
+        <Stack.Screen name="Reason" component={ReasonScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

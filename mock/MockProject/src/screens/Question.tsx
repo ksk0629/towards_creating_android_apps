@@ -21,7 +21,9 @@ function QuestionScreen() {
           <Button
             title="CATS"
             color="green"
-            onPress={() => navigation.navigate("Home")}
+            onPress={() =>
+              navigation.navigate("Reason", { preferredAnimal: "cats" })
+            }
           />
           <Image
             style={styles.image}
@@ -32,7 +34,9 @@ function QuestionScreen() {
           <Button
             title="DOGS"
             color="green"
-            onPress={() => navigation.navigate("Home")}
+            onPress={() =>
+              navigation.navigate("Reason", { preferredAnimal: "dogs" })
+            }
           />
           <Image
             style={styles.image}
