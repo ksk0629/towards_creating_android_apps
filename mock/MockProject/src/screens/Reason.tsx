@@ -45,9 +45,7 @@ function ReasonScreen() {
         <Button
           title="send"
           color="green"
-          onPress={() =>
-            navigation.navigate("Reason", { preferredAnimal: value })
-          }
+          onPress={() => navigation.navigate("Redirect", { reason: value })}
         />
       </View>
     </SafeAreaView>
