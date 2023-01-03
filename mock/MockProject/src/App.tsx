@@ -6,7 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { RootStackParamList } from "./RootStackParams";
 
 import HomeScreen from "./screens/Home";
-import Question from "./screens/Question";
+import QuestionScreen from "./screens/Question";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -15,7 +15,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Question" component={Question} />
+        <Stack.Screen name="Question" component={QuestionScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
